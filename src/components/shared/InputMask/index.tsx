@@ -1,16 +1,19 @@
-import { InputHTMLAttributes, ComponentType, useEffect, useState } from 'react';
+import { ComponentType, useEffect, useState } from 'react';
 import { useFormContext } from 'react-hook-form';
+
+import ReactInputMask, { Props as InputProps } from 'react-input-mask';
 
 import { IconBaseProps } from 'react-icons';
 
 import { Container } from './styles';
 
-interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
+interface InputMaskProps extends InputProps {
   name: string;
   icon?: ComponentType<IconBaseProps>;
+  maskChar?: any;
 }
 
-export function Input({ name, icon: Icon, defaultValue, ...rest }: InputProps) {
+export function InputMask({ name, icon: Icon, defaultValue, ...rest }: InputMaskProps) {
   const { register, unregister, watch, setValue } = useFormContext();
 
   const [isFilled, setIsFilled] = useState(!!defaultValue);
@@ -48,7 +51,7 @@ export function Input({ name, icon: Icon, defaultValue, ...rest }: InputProps) {
     <Container isFilled={isFilled} isFocused={isFocused}>
       {Icon && <Icon size={25} />}
 
-      <input
+      <ReactInputMask
         autoComplete="off"
         defaultValue={defaultValue}
         onChange={event => handleInputChange(event.currentTarget.value)}

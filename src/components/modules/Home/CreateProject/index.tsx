@@ -3,6 +3,7 @@ import { FiMail, FiSmartphone, FiUser } from 'react-icons/fi';
 
 import { Input } from '~/components/shared/Input';
 import { Button } from '~/components/shared/Button';
+import { InputMask } from '~/components/shared/InputMask';
 
 import { Container, Content, FormContainer } from './styles';
 
@@ -30,7 +31,14 @@ export function CreateProject() {
           <form>
             <Input name="name" icon={FiUser} placeholder="Nome completo" />
             <Input type="email" name="email" icon={FiMail} placeholder="E-mail" />
-            <Input name="cellphone" icon={FiSmartphone} placeholder="Telefone" />
+            <InputMask
+              mask="(99) 99999-9999"
+              maskChar={null}
+              alwaysShowMask={false}
+              name="cellphone"
+              icon={FiSmartphone}
+              placeholder="Telefone"
+            />
 
             <Button type="button">
               <span>Enviar mensagem</span>
