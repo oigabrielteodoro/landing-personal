@@ -1,10 +1,12 @@
-import { SEO } from '~/components/SEO';
+import { SEO } from '~/components/shared/SEO';
 
-import { Apresentation } from '~/components/Apresentation';
+import { Apresentation } from '~/components/modules/Home/Apresentation';
 
-import { Services } from '~/components/Services';
+import { Services } from '~/components/modules/Home/Services';
 
-import { Techs } from '~/components/Techs';
+import { Techs } from '~/components/modules/Home/Techs';
+
+import { CreateProject } from '~/components/modules/Home/CreateProject';
 
 import { Container } from '~/styles/pages/Home';
 
@@ -19,6 +21,8 @@ export default function Home() {
         <Services />
 
         <Techs />
+
+        <CreateProject />
       </Container>
     </>
   );

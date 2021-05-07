@@ -42,7 +42,7 @@ const GlobalStyle = createGlobalStyle`
     font-weight: 400;
   }
 
-  h1, h2, h3, h4, h5, h6, button {
+  h1, button {
     font-family: 'Fira Code', sans-serif;
   }
 
@@ -77,6 +77,10 @@ const GlobalStyle = createGlobalStyle`
 
   .blue-color {
     color: var(--blue-400);
+  }
+
+  .gray-color {
+    color: var(--gray-100);
   }
 `;
 
