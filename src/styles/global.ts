@@ -33,11 +33,12 @@ const GlobalStyle = createGlobalStyle`
   body {
     background: var(--black-800);
     -webkit-font-smoothing: antialiased;
-    color: var(--white);
+    overflow-x: hidden;
   }
 
   body, input, textarea {
     font-family: 'Rubik', sans-serif;
+    color: var(--white);
     font-weight: 400;
   }
 

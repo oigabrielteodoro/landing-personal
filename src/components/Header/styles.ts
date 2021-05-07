@@ -5,7 +5,10 @@ export const Container = styled.div`
   align-items: center;
   justify-content: space-between;
 
-  padding: 80px 90px;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  padding: 80px 0;
 
   nav ul {
     display: flex;
