@@ -31,7 +31,13 @@ export default class MyDocument extends Document {
     return (
       <Html lang="pt-BR">
         <Head>
+          <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link rel="icon" href="/static/img/favicon.png" />
+
+          <link
+            href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+          />
         </Head>
         <body>
           <Main />
