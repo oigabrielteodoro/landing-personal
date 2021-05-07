@@ -1,4 +1,8 @@
 import { FormProvider, useForm } from 'react-hook-form';
+import { FiMail, FiSmartphone, FiUser } from 'react-icons/fi';
+
+import { Input } from '~/components/shared/Input';
+import { Button } from '~/components/shared/Button';
 
 import { Container, Content, FormContainer } from './styles';
 
@@ -24,7 +28,13 @@ export function CreateProject() {
       <FormContainer>
         <FormProvider handleSubmit={handleSubmit} {...form}>
           <form>
-            <h1>Formulário</h1>
+            <Input name="name" icon={FiUser} placeholder="Nome completo" />
+            <Input type="email" name="email" icon={FiMail} placeholder="E-mail" />
+            <Input name="cellphone" icon={FiSmartphone} placeholder="Telefone" />
+
+            <Button type="button">
+              <span>Enviar mensagem</span>
+            </Button>
           </form>
         </FormProvider>
       </FormContainer>

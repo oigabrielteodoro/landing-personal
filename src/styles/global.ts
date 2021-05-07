@@ -75,6 +75,22 @@ const GlobalStyle = createGlobalStyle`
     background: var(--blue-400);
   }
 
+  &::-moz-selection {
+    color: #fff;
+    background: var(--blue-400);
+  }
+
+
+  input:-webkit-autofill {
+    box-shadow:0 0 0 50px var(--black-800) inset;
+    -webkit-text-fill-color: #fff;
+  }
+
+  input:-webkit-autofill:focus {
+    box-shadow: 0 0 0 50px var(--black-800) inset;
+    -webkit-text-fill-color: #fff;
+  }
+
   .blue-color {
     color: var(--blue-400);
   }

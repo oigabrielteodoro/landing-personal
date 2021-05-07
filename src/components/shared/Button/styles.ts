@@ -11,15 +11,19 @@ export const Container = styled.button`
   align-items: center;
   justify-content: center;
 
-  color: var(--blue-400);
-  font-size: 16px;
-  font-weight: 600;
-
   padding: 20px 0;
 
   flex: 1;
 
   transition: all 0.5s;
+
+  span {
+    z-index: 1;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--blue-400);
+    transition: all 0.5s;
+  }
 
   &::before {
     content: '';
@@ -32,11 +36,12 @@ export const Container = styled.button`
     right: 0;
 
     transition: all 0.5s;
-    z-index: -1;
   }
 
   &:hover {
-    color: var(--white);
+    span {
+      color: var(--white);
+    }
 
     &::before {
       width: 100%;

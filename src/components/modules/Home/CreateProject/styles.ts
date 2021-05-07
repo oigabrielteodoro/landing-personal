@@ -44,4 +44,14 @@ export const FormContainer = styled.div`
 
   padding: 59px;
   border-radius: 10px;
+
+  margin-left: -160px;
+
+  max-width: 544px;
+  width: 100%;
+
+  form {
+    display: grid;
+    grid-gap: 23px;
+  }
 `;

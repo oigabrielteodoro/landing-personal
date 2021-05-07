@@ -22,7 +22,7 @@ export const Content = styled.div`
     font-size: 1.75rem;
   }
 
-  span {
+  > span {
     color: var(--gray-100);
     font-size: 1.25rem;
     margin-top: 20px;

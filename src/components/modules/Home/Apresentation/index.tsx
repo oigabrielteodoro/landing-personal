@@ -33,7 +33,9 @@ export function Apresentation() {
         </UserContainer>
 
         <ButtonContainer>
-          <Button>Iniciar um projeto</Button>
+          <Button>
+            <span>Iniciar um projeto</span>
+          </Button>
         </ButtonContainer>
       </Content>
 
