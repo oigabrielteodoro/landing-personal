@@ -1,6 +1,19 @@
 import styled from 'styled-components';
 
 export const Container = styled.section`
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  > img {
+    margin-top: -30px;
+  }
+`;
+
+export const Content = styled.div`
   display: flex;
   flex-direction: column;
 

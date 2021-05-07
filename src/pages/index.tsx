@@ -1,13 +1,14 @@
 import { Apresentation } from '~/components/Apresentation';
+import { Services } from '~/components/Services';
 
 import { Container } from '~/styles/pages/Home';
 
 export default function Home() {
   return (
     <Container>
-      <img src="/static/img/apresentation-background.svg" alt="Background" />
-
       <Apresentation />
+
+      <Services />
     </Container>
   );
 }
