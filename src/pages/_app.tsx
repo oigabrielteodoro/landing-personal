@@ -1,12 +1,19 @@
 import { AppProps } from 'next/app';
 
+import { Header } from '~/components/Header';
+
 import { GlobalStyle } from '~/styles/global';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <GlobalStyle />
-      <Component {...pageProps} />
+
+      <Header />
+
+      <main role="main">
+        <Component {...pageProps} />
+      </main>
     </>
   );
 }

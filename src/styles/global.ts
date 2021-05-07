@@ -31,8 +31,9 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background: var(--white);
+    background: var(--black-800);
     -webkit-font-smoothing: antialiased;
+    color: var(--white);
   }
 
   body, input, textarea {
