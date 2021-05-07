@@ -2,7 +2,16 @@ import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
   :root {
-    --shape: #F8F8F8;
+    --white: #fff;
+
+    --black-100: #1D1F20;
+    --black-400: #212223;
+    --black-800: #131515;
+
+    --gray-100: #CCCCCC;
+    --gray-400: #737380;
+
+    --blue-400: #407BFF;
   }
 
   * {
@@ -26,9 +35,13 @@ const GlobalStyle = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
   }
 
-  body, input, textarea, button {
-    font-family: 'Fira Code', sans-serif;
+  body, input, textarea {
+    font-family: 'Rubik', sans-serif;
     font-weight: 400;
+  }
+
+  h1, h2, h3, h4, h5, h6, button {
+    font-family: 'Fira Code', sans-serif;
   }
 
   button {
