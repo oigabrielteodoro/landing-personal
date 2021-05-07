@@ -1,10 +1,11 @@
 import { useState } from 'react';
 
 import { FormProvider, useForm } from 'react-hook-form';
-import { FiMail, FiPlus, FiSmartphone, FiUser } from 'react-icons/fi';
+import { FiMail, FiMessageSquare, FiPlus, FiSmartphone, FiUser } from 'react-icons/fi';
 
 import { Input } from '~/components/shared/Input';
 import { Button } from '~/components/shared/Button';
+import { TextArea } from '~/components/shared/TextArea';
 import { InputMask } from '~/components/shared/InputMask';
 import { InputRadio } from '~/components/shared/InputRadio';
 
@@ -85,6 +86,8 @@ export function CreateProject() {
                 </SelectAmountItem>
               </ul>
             </SelectAmountPagesContainer>
+
+            <TextArea name="message" icon={FiMessageSquare} placeholder="Mensagem" />
 
             <Button type="button">
               <span>Enviar mensagem</span>
