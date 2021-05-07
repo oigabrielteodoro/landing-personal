@@ -57,6 +57,10 @@ const GlobalStyle = createGlobalStyle`
   ul {
     list-style: none;
   }
+
+  .blue-color {
+    color: var(--blue-400);
+  }
 `;
 
 export { GlobalStyle };
