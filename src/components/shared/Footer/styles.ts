@@ -15,6 +15,13 @@ export const TopContainer = styled.div`
       font-weight: 500;
       color: var(--white);
 
+      transition: filter 0.2s;
+      cursor: pointer;
+
+      &:hover {
+        filter: brightness(0.8);
+      }
+
       & + li {
         margin-left: 50px;
       }

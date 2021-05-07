@@ -1,14 +1,27 @@
+import { useState } from 'react';
+
 import { FormProvider, useForm } from 'react-hook-form';
-import { FiMail, FiSmartphone, FiUser } from 'react-icons/fi';
+import { FiMail, FiPlus, FiSmartphone, FiUser } from 'react-icons/fi';
 
 import { Input } from '~/components/shared/Input';
 import { Button } from '~/components/shared/Button';
 import { InputMask } from '~/components/shared/InputMask';
+import { InputRadio } from '~/components/shared/InputRadio';
 
-import { Container, Content, FormContainer } from './styles';
+import {
+  Container,
+  Content,
+  FormContainer,
+  YouHaveDesignContainer,
+  SelectAmountPagesContainer,
+  SelectAmountItem,
+} from './styles';
 
 export function CreateProject() {
   const { handleSubmit, ...form } = useForm();
+
+  const [hasDesign, setHasDesign] = useState(false);
+  const [pageSelected, setPageSelected] = useState<string>();
 
   return (
     <Container>
@@ -31,6 +44,7 @@ export function CreateProject() {
           <form>
             <Input name="name" icon={FiUser} placeholder="Nome completo" />
             <Input type="email" name="email" icon={FiMail} placeholder="E-mail" />
+
             <InputMask
               mask="(99) 99999-9999"
               maskChar={null}
@@ -39,6 +53,38 @@ export function CreateProject() {
               icon={FiSmartphone}
               placeholder="Telefone"
             />
+
+            <YouHaveDesignContainer>
+              <span>Você já possui o design?</span>
+
+              <section>
+                <InputRadio isSelected={hasDesign} placeholder="Sim" onChangeValue={() => setHasDesign(true)} />
+                <InputRadio isSelected={!hasDesign} placeholder="Não" onChangeValue={() => setHasDesign(false)} />
+              </section>
+            </YouHaveDesignContainer>
+
+            <SelectAmountPagesContainer>
+              <span>Número de páginas do projeto</span>
+
+              <ul>
+                {[1, 2, 3, 4, 5].map(pageItem => (
+                  <SelectAmountItem
+                    key={String(Math.random())}
+                    isSelected={pageItem.toString() === pageSelected}
+                    onClick={() => setPageSelected(pageItem.toString())}
+                  >
+                    {pageItem}
+                  </SelectAmountItem>
+                ))}
+                <SelectAmountItem
+                  key={String(Math.random())}
+                  isSelected={pageSelected === '+'}
+                  onClick={() => setPageSelected('+')}
+                >
+                  <FiPlus size={18} />
+                </SelectAmountItem>
+              </ul>
+            </SelectAmountPagesContainer>
 
             <Button type="button">
               <span>Enviar mensagem</span>

@@ -1,4 +1,10 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+
+import { Container as InputRadioContainer } from '~/components/shared/InputRadio/styles';
+
+interface SelectAmountItemProps {
+  isSelected?: boolean;
+}
 
 export const Container = styled.div`
   max-width: 1100px;
@@ -54,4 +60,81 @@ export const FormContainer = styled.div`
     display: grid;
     grid-gap: 23px;
   }
+`;
+
+export const YouHaveDesignContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  > span {
+    color: var(--white);
+    font-size: 1rem;
+  }
+
+  section {
+    display: flex;
+    align-items: center;
+
+    margin-top: 20px;
+
+    ${InputRadioContainer} {
+      & + ${InputRadioContainer} {
+        margin-left: 25px;
+      }
+
+      span {
+        margin-left: 13px;
+      }
+    }
+  }
+`;
+
+export const SelectAmountPagesContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  > span {
+    color: var(--white);
+    font-size: 1rem;
+  }
+
+  ul {
+    display: flex;
+    align-items: center;
+    margin-top: 18px;
+  }
+`;
+
+export const SelectAmountItem = styled.li<SelectAmountItemProps>`
+  background: transparent;
+
+  border: 2px solid var(--blue-400);
+
+  height: 40px;
+  width: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: all 0.2s;
+
+  cursor: pointer;
+  z-index: 1;
+
+  &:hover {
+    background: var(--blue-400);
+  }
+
+  & + li {
+    margin-left: 14px;
+  }
+
+  ${({ isSelected }) =>
+    isSelected &&
+    css`
+      background: var(--blue-400);
+    `}
 `;
