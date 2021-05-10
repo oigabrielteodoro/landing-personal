@@ -18,7 +18,7 @@ export const Container = styled.div`
     flex-direction: column;
     align-items: center;
 
-    margin: 2.875rem 0;
+    margin: 2.875rem 0 0;
   `}
 `;
 
@@ -56,6 +56,8 @@ export const Content = styled.div`
     align-items: center;
     text-align: center;
 
+    padding: 0 2.875rem;
+
     h2 {
       display: none;
     }
@@ -88,7 +90,7 @@ export const FormContainer = styled.div`
 
   ${media.lessThan('md')`
     margin-left: 0;
-    margin-top: 2rem;
+    margin-top: 3rem;
     border-radius: 0;
     padding: 2.875rem;
     max-width: 100vw;

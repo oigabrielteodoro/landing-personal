@@ -44,6 +44,7 @@ export const Container = styled.header`
 
   ${media.lessThan('sm')`
     padding: 3.5rem 2.875rem;
+    justify-content: center;
 
     nav {
       display: none;

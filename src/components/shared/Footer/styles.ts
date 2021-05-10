@@ -2,11 +2,7 @@ import styled from 'styled-components';
 
 import { media } from '~/styles/media';
 
-export const Container = styled.footer`
-  ${media.lessThan('md')`
-    display: none;
-  `}
-`;
+export const Container = styled.footer``;
 
 export const TopContainer = styled.div`
   padding: 55px 100px;
@@ -38,13 +34,17 @@ export const TopContainer = styled.div`
       }
     }
   }
+
+  ${media.lessThan('md')`
+    display: none;
+  `}
 `;
 
 export const BottomContainer = styled.div`
   padding: 65px 0;
 
   color: var(--gray-400);
-  font-size: 18px;
+  font-size: 1.25rem;
 
   max-width: 1250px;
   margin: 0 auto;
@@ -52,4 +52,13 @@ export const BottomContainer = styled.div`
   a {
     color: var(--blue-400);
   }
+
+  ${media.lessThan('md')`
+    padding: 2rem;
+    max-width: 100vw;
+    margin: 0;
+
+    text-align: center;
+    font-size: 0.875rem;
+  `}
 `;

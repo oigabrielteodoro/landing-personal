@@ -3,6 +3,8 @@ import { media } from '~/styles/media';
 
 export const Container = styled.section`
   max-width: 1100px;
+  width: 100%;
+
   margin: 0 auto;
 
   display: flex;
@@ -45,27 +47,17 @@ export const Content = styled.div`
     margin-top: 20px;
   }
 
-  ${media.greaterThan('sm')`
+  ${media.lessThan('md')`
     align-items: center;
     width: 100%;
 
     h1 {
       margin-top: 0;
+      font-size: 1.5rem;
     }
 
     > span {
       text-align: center;
-    }
-  `}
-
-  ${media.lessThan('sm')`
-    h1 {
-      margin-top: 0;
-      font-size: 1.5rem;
-    }
-
-    span {
-      font-size: 1rem;
 
       br {
         display: none;

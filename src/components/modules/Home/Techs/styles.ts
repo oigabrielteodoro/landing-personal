@@ -67,6 +67,11 @@ export const TechList = styled.ul`
     display: flex;
     flex-direction: column;
     grid-gap: 0;
+    margin: 2rem auto 0;
+  `}
+
+  ${media.greaterThan('sm')`
+    margin: 5rem auto 0;
   `}
 
   ${media.greaterThan('md')`

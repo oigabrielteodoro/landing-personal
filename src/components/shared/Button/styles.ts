@@ -11,7 +11,7 @@ export const Container = styled.button`
   align-items: center;
   justify-content: center;
 
-  padding: 20px 0;
+  padding: 1.25rem 0;
 
   flex: 1;
 
@@ -19,7 +19,7 @@ export const Container = styled.button`
 
   span {
     z-index: 1;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 600;
     color: var(--blue-400);
     transition: all 0.5s;
