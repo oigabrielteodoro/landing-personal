@@ -33,6 +33,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     background: var(--black-800);
     -webkit-font-smoothing: antialiased;
+
     overflow-x: hidden;
   }
 

@@ -14,8 +14,11 @@ export const Container = styled.div`
   display: flex;
   align-items: flex-start;
 
-  ${media.lessThan('sm')`
-    display: none;
+  ${media.lessThan('md')`
+    flex-direction: column;
+    align-items: center;
+
+    margin: 2.875rem 0;
   `}
 `;
 
@@ -48,6 +51,23 @@ export const Content = styled.div`
     left: -100px;
     top: 116px;
   }
+
+  ${media.lessThan('md')`
+    align-items: center;
+    text-align: center;
+
+    h2 {
+      display: none;
+    }
+
+    span {
+      margin-top: 1rem;
+    }
+
+    img {
+      display: none;
+    }
+  `}
 `;
 
 export const FormContainer = styled.div`
@@ -65,6 +85,18 @@ export const FormContainer = styled.div`
     display: grid;
     grid-gap: 23px;
   }
+
+  ${media.lessThan('md')`
+    margin-left: 0;
+    margin-top: 2rem;
+    border-radius: 0;
+    padding: 2.875rem;
+    max-width: 100vw;
+  `}
+
+  ${media.lessThan('xs')`
+    padding: 2rem;
+  `}
 `;
 
 export const YouHaveDesignContainer = styled.div`
@@ -142,4 +174,10 @@ export const SelectAmountItem = styled.li<SelectAmountItemProps>`
     css`
       background: var(--blue-400);
     `}
+
+  @media screen and (max-width: 369px) {
+    &:nth-child(5) {
+      display: none;
+    }
+  }
 `;

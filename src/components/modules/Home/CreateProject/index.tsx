@@ -28,7 +28,8 @@ export function CreateProject() {
     <Container>
       <Content>
         <h1>
-          const <strong className="blue-color">project</strong> = new <strong className="gray-color">Project</strong>();
+          const <strong className="blue-color">project</strong> = new{' '}
+          <strong className="gray-color">Project</strong>();
         </h1>
         <h2>
           Vamos tirar sua idéia do <br /> papel!
@@ -59,8 +60,16 @@ export function CreateProject() {
               <span>Você já possui o design?</span>
 
               <section>
-                <InputRadio isSelected={hasDesign} placeholder="Sim" onChangeValue={() => setHasDesign(true)} />
-                <InputRadio isSelected={!hasDesign} placeholder="Não" onChangeValue={() => setHasDesign(false)} />
+                <InputRadio
+                  isSelected={hasDesign}
+                  placeholder="Sim"
+                  onChangeValue={() => setHasDesign(true)}
+                />
+                <InputRadio
+                  isSelected={!hasDesign}
+                  placeholder="Não"
+                  onChangeValue={() => setHasDesign(false)}
+                />
               </section>
             </YouHaveDesignContainer>
 

@@ -13,7 +13,7 @@ interface TechUsageItemProps {
 export const Container = styled.div`
   background: var(--black-100);
 
-  padding: 80px 0;
+  padding: 5rem 0;
 
   h1 {
     font-size: 1.75rem;
@@ -41,21 +41,32 @@ export const Container = styled.div`
       font-size: 1rem;
     }
   `}
+
+  ${media.lessThan('xs')`
+    padding: 2rem;
+
+    h1 {
+      font-size: 1.25rem;
+    }
+
+    > span {
+      margin-top: 5px;
+    }
+  `}
 `;
 
 export const TechList = styled.ul`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 35px;
+  grid-gap: 2.5rem;
 
   max-width: 1100px;
-  margin: 80px auto 0;
+  margin: 5rem auto 0;
 
-  ${media.lessThan('sm')`
+  ${media.lessThan('md')`
     display: flex;
     flex-direction: column;
-
-    margin: 2.5rem auto 0;
+    padding: 0 3rem;
     grid-gap: 0;
   `}
 `;
@@ -83,7 +94,7 @@ export const TechListItem = styled.li<TechListItemProps>`
     border-radius: 5px 0 0 5px;
   }
 
-  ${media.lessThan('sm')`
+  ${media.lessThan('md')`
     & + li {
       margin-top: 1rem;
     }
@@ -100,9 +111,22 @@ export const TechItemData = styled.div`
 
   span {
     font-weight: 500;
-    font-size: 18px;
+    font-size: 1.25rem;
     color: var(--white);
   }
+
+  ${media.lessThan('sm')`
+    span {
+      font-size: 1.1rem;
+    }
+  `}
+`;
+
+export const TechDataContainer = styled.div`
+  display: flex;
+  align-items: center;
+
+  margin-left: auto;
 `;
 
 export const TechUsageList = styled.ul`
@@ -110,6 +134,10 @@ export const TechUsageList = styled.ul`
   align-items: center;
 
   margin-left: auto;
+
+  @media screen and (max-width: 350px) {
+    display: none;
+  }
 `;
 
 export const TechUsageItem = styled.li<TechUsageItemProps>`

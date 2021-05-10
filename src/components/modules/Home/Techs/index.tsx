@@ -5,6 +5,7 @@ import {
   TechList,
   TechListItem,
   TechItemData,
+  TechDataContainer,
   TechUsageItem,
   TechUsageList,
   TechInformation,
@@ -28,15 +29,20 @@ export function Techs() {
             <TechItemData>
               <span>{tech.name}</span>
 
-              <TechUsageList>
-                {[1, 2, 3].map(level => (
-                  <TechUsageItem key={String(Math.random())} isUsage={tech.level >= level} />
-                ))}
-              </TechUsageList>
+              <TechDataContainer>
+                <TechUsageList>
+                  {[1, 2, 3].map(level => (
+                    <TechUsageItem
+                      key={String(Math.random())}
+                      isUsage={tech.level >= level}
+                    />
+                  ))}
+                </TechUsageList>
 
-              <TechInformation data-content={tech.content}>
-                <img src="/static/img/icons/help.svg" alt="Help" />
-              </TechInformation>
+                <TechInformation data-content={tech.content}>
+                  <img src="/static/img/icons/help.svg" alt="Help" />
+                </TechInformation>
+              </TechDataContainer>
             </TechItemData>
           </TechListItem>
         ))}

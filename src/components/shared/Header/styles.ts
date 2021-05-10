@@ -9,7 +9,7 @@ export const Container = styled.header`
   max-width: 1100px;
   margin: 0 auto;
 
-  padding: 80px 0;
+  padding: 5.75rem 0;
 
   nav ul {
     display: flex;
@@ -34,11 +34,23 @@ export const Container = styled.header`
     }
   }
 
+  ${media.lessThan('md')`
+    padding: 3rem;
+
+    nav {
+      margin-left: auto;
+    }
+  `}
+
   ${media.lessThan('sm')`
     padding: 3.5rem 2.875rem;
 
     nav {
       display: none;
     }
+  `}
+
+  ${media.lessThan('xs')`
+    padding: 3rem 2rem;
   `}
 `;

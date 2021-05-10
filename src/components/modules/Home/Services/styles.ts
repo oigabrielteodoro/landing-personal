@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import { media } from '~/styles/media';
 
-export const Container = styled.div`
+export const Container = styled.section`
   background: var(--black-100);
   margin-top: 5.7rem;
 `;
@@ -15,12 +15,18 @@ export const Content = styled.div`
   grid-gap: 35px;
   grid-template-columns: repeat(3, 1fr);
 
-  ${media.lessThan('sm')`
+  ${media.lessThan('md')`
     display: flex;
     flex-direction: column;
 
     padding: 0 2.875rem;
     grid-gap: 0;
+
+    max-width: 100vw;
+  `}
+
+  ${media.lessThan('xs')`
+    padding: 0 2rem;
   `}
 `;
 
@@ -35,7 +41,7 @@ export const ServiceCard = styled.div`
   align-items: flex-start;
 
   margin-top: -40px;
-  border-radius: 10px;
+  border-radius: 0.75rem;
 
   border: 2px solid transparent;
 
@@ -96,9 +102,17 @@ export const ServiceCard = styled.div`
     }
   `}
 
-  ${media.lessThan('sm')`
+  ${media.lessThan('md')`
     & + div {
       margin-top: 16px;
+    }
+  `}
+
+  ${media.lessThan('xs')`
+    border-radius: 0.5rem;
+
+    section {
+      margin-top: 0;
     }
   `}
 `;
