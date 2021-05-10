@@ -17,6 +17,8 @@ export const Container = styled.section`
     flex-direction: column;
     padding: 0 2.875rem;
 
+    max-width: 100vw;
+
     > img {
       display: none;
     }

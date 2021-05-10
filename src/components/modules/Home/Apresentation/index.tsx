@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import Link from 'next/link';
 
 import { Button } from '~/components/shared/Button';
@@ -26,7 +27,10 @@ export function Apresentation() {
           <div>
             <span>Gabriel Teodoro</span>
             <p>
-              Product Developer at <Link href="https://brainn.co">Brainn Co</Link>
+              Product Developer at{' '}
+              <Link href="https://brainn.co">
+                <a target="_blank">Brainn Co</a>
+              </Link>
             </p>
           </div>
         </UserContainer>

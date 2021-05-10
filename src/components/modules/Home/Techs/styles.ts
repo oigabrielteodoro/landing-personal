@@ -29,6 +29,18 @@ export const Container = styled.div`
 
     margin-top: 10px;
   }
+
+  ${media.lessThan('sm')`
+    padding: 2.875rem;
+
+    h1 {
+      font-size: 1.5rem;
+    }
+
+    > span {
+      font-size: 1rem;
+    }
+  `}
 `;
 
 export const TechList = styled.ul`
@@ -42,6 +54,9 @@ export const TechList = styled.ul`
   ${media.lessThan('sm')`
     display: flex;
     flex-direction: column;
+
+    margin: 2.5rem auto 0;
+    grid-gap: 0;
   `}
 `;
 
@@ -67,6 +82,12 @@ export const TechListItem = styled.li<TechListItemProps>`
     height: 71px;
     border-radius: 5px 0 0 5px;
   }
+
+  ${media.lessThan('sm')`
+    & + li {
+      margin-top: 1rem;
+    }
+  `}
 `;
 
 export const TechItemData = styled.div`
@@ -150,6 +171,10 @@ export const TechInformation = styled.div`
     top: 40px;
 
     min-width: 300px;
+
+    ${media.lessThan('sm')`
+      right: -40px;
+    `}
   }
 
   &::after {

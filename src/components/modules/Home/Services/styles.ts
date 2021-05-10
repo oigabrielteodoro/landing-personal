@@ -27,6 +27,8 @@ export const Content = styled.div`
 export const ServiceCard = styled.div`
   background: var(--black-400);
 
+  width: 100%;
+
   padding: 30px;
 
   display: flex;
@@ -38,11 +40,6 @@ export const ServiceCard = styled.div`
   border: 2px solid transparent;
 
   transition: all 0.2s;
-
-  &:hover {
-    border-color: var(--blue-400);
-    transform: translateY(-15px);
-  }
 
   section {
     display: flex;
@@ -91,6 +88,13 @@ export const ServiceCard = styled.div`
       }
     }
   }
+
+  ${media.greaterThan('md')`
+    &:hover {
+      border-color: var(--blue-400);
+      transform: translateY(-15px);
+    }
+  `}
 
   ${media.lessThan('sm')`
     & + div {
