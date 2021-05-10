@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { media } from '~/styles/media';
 
 export const Container = styled.section`
   max-width: 1100px;
@@ -11,6 +12,15 @@ export const Container = styled.section`
   > img {
     margin-top: -30px;
   }
+
+  ${media.lessThan('sm')`
+    flex-direction: column;
+    padding: 0 2.875rem;
+
+    > img {
+      display: none;
+    }
+  `}
 `;
 
 export const Content = styled.div`
@@ -27,6 +37,18 @@ export const Content = styled.div`
     font-size: 1.25rem;
     margin-top: 20px;
   }
+
+  ${media.lessThan('sm')`
+    flex: 1;
+
+    h1 {
+      margin-top: 0;
+    }
+
+    span br {
+      display: none;
+    }
+  `}
 `;
 
 export const UserContainer = styled.div`
@@ -74,6 +96,13 @@ export const UserContainer = styled.div`
       }
     }
   }
+
+  ${media.lessThan('sm')`
+    img {
+      width: 52px;
+      height: 52px;
+    }
+  `}
 `;
 
 export const ButtonContainer = styled.div`

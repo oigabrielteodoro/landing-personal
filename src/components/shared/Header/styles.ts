@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { media } from '~/styles/media';
 
 export const Container = styled.header`
   display: flex;
@@ -32,4 +33,12 @@ export const Container = styled.header`
       }
     }
   }
+
+  ${media.lessThan('sm')`
+    padding: 80px 2.875rem;
+
+    nav {
+      display: none;
+    }
+  `}
 `;

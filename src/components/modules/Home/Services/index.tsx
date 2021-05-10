@@ -11,7 +11,9 @@ export function Services() {
 
           <section>
             <strong>Sites</strong>
-            <span>Desenvolvimento de sites e landing pages para a divulgação da sua idéia!</span>
+            <span>
+              Desenvolvimento de sites e landing pages para a divulgação da sua idéia!
+            </span>
 
             <button type="button">
               Ver projetos <FiArrowRight size={15} />
@@ -23,7 +25,9 @@ export function Services() {
 
           <section>
             <strong>Softwares</strong>
-            <span>Desenvolvimento de softwares para ajudar a realizar as tarefas da sua idéia!</span>
+            <span>
+              Desenvolvimento de softwares para ajudar a realizar as tarefas da sua idéia!
+            </span>
 
             <button type="button">
               Ver projetos <FiArrowRight size={15} />
@@ -35,7 +39,10 @@ export function Services() {
 
           <section>
             <strong>Aplicativos</strong>
-            <span>Desenvolvimento de aplicativos híbridos para a sua idéia atingir mais usuários!</span>
+            <span>
+              Desenvolvimento de aplicativos híbridos para a sua idéia atingir mais
+              usuários!
+            </span>
 
             <button type="button">
               Ver projetos <FiArrowRight size={15} />

@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import { media } from '~/styles/media';
+
 export const Container = styled.div`
   background: var(--black-100);
   margin-top: 80px;
@@ -12,6 +14,14 @@ export const Content = styled.div`
   display: grid;
   grid-gap: 35px;
   grid-template-columns: repeat(3, 1fr);
+
+  ${media.lessThan('sm')`
+    display: flex;
+    flex-direction: column;
+
+    padding: 0 2.875rem;
+    grid-gap: 0;
+  `}
 `;
 
 export const ServiceCard = styled.div`
@@ -81,4 +91,10 @@ export const ServiceCard = styled.div`
       }
     }
   }
+
+  ${media.lessThan('sm')`
+    & + div {
+      margin-top: 16px;
+    }
+  `}
 `;

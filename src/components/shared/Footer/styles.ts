@@ -1,40 +1,53 @@
 import styled from 'styled-components';
 
-export const Container = styled.footer``;
+import { media } from '~/styles/media';
+
+export const Container = styled.footer`
+  ${media.lessThan('sm')`
+    display: none;
+  `}
+`;
 
 export const TopContainer = styled.div`
   padding: 55px 100px;
   background: var(--black-100);
 
-  nav ul {
-    display: flex;
-    align-items: center;
+  nav {
+    max-width: 1250px;
+    margin: 0 auto;
 
-    li {
-      font-size: 18px;
-      font-weight: 500;
-      color: var(--white);
+    ul {
+      display: flex;
+      align-items: center;
 
-      transition: filter 0.2s;
-      cursor: pointer;
+      li {
+        font-size: 18px;
+        font-weight: 500;
+        color: var(--white);
 
-      &:hover {
-        filter: brightness(0.8);
-      }
+        transition: filter 0.2s;
+        cursor: pointer;
 
-      & + li {
-        margin-left: 50px;
+        &:hover {
+          filter: brightness(0.8);
+        }
+
+        & + li {
+          margin-left: 50px;
+        }
       }
     }
   }
 `;
 
 export const BottomContainer = styled.div`
-  background: var(--black-800);
-  padding: 65px 100px;
+  padding: 65px 0;
 
   color: var(--gray-400);
   font-size: 18px;
+
+  max-width: 1250px;
+  margin: 0 auto;
 
   a {
     color: var(--blue-400);

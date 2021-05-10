@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components';
 
 import { Container as InputRadioContainer } from '~/components/shared/InputRadio/styles';
+import { media } from '~/styles/media';
 
 interface SelectAmountItemProps {
   isSelected?: boolean;
@@ -12,6 +13,10 @@ export const Container = styled.div`
 
   display: flex;
   align-items: flex-start;
+
+  ${media.lessThan('sm')`
+    display: none;
+  `}
 `;
 
 export const Content = styled.div`

@@ -1,5 +1,7 @@
 import styled, { css } from 'styled-components';
 
+import { media } from '~/styles/media';
+
 interface TechListItemProps {
   colorToHover: string;
 }
@@ -36,6 +38,11 @@ export const TechList = styled.ul`
 
   max-width: 1100px;
   margin: 80px auto 0;
+
+  ${media.lessThan('sm')`
+    display: flex;
+    flex-direction: column;
+  `}
 `;
 
 export const TechListItem = styled.li<TechListItemProps>`

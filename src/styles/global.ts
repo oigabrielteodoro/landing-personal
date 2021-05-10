@@ -80,7 +80,6 @@ const GlobalStyle = createGlobalStyle`
     background: var(--blue-400);
   }
 
-
   input:-webkit-autofill {
     box-shadow:0 0 0 50px var(--black-800) inset;
     -webkit-text-fill-color: #fff;

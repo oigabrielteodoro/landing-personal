@@ -17,8 +17,7 @@ export function Apresentation() {
         </h1>
         <span>
           Aplicações fullstack para web e mobile desde o
-          <br />
-          layout até o código.
+          <br /> layout até o código.
         </span>
 
         <UserContainer>
