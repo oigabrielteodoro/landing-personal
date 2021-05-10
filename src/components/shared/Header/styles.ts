@@ -35,7 +35,7 @@ export const Container = styled.header`
   }
 
   ${media.lessThan('sm')`
-    padding: 80px 2.875rem;
+    padding: 3.5rem 2.875rem;
 
     nav {
       display: none;

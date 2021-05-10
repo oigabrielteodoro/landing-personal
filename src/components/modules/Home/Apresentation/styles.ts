@@ -45,10 +45,15 @@ export const Content = styled.div`
 
     h1 {
       margin-top: 0;
+      font-size: 1.5rem;
     }
 
-    span br {
-      display: none;
+    span {
+      font-size: 1rem;
+
+      br {
+        display: none;
+      }
     }
   `}
 `;

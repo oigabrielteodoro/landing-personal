@@ -4,7 +4,7 @@ import { media } from '~/styles/media';
 
 export const Container = styled.div`
   background: var(--black-100);
-  margin-top: 80px;
+  margin-top: 5.7rem;
 `;
 
 export const Content = styled.div`
