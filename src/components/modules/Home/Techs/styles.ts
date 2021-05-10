@@ -34,24 +34,17 @@ export const Container = styled.div`
     padding: 2.875rem;
 
     h1 {
-      font-size: 1.5rem;
+      font-size: 1.25rem;
     }
 
     > span {
+      margin-top: 5px;
       font-size: 1rem;
     }
   `}
 
   ${media.lessThan('xs')`
     padding: 2rem;
-
-    h1 {
-      font-size: 1.25rem;
-    }
-
-    > span {
-      margin-top: 5px;
-    }
   `}
 `;
 
@@ -143,7 +136,7 @@ export const TechUsageList = styled.ul`
 
   margin-left: auto;
 
-  @media screen and (max-width: 350px) {
+  @media screen and (max-width: 399px) {
     display: none;
   }
 `;
