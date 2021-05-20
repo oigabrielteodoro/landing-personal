@@ -67,7 +67,7 @@ export const TechList = styled.ul`
     margin: 5rem auto 0;
   `}
 
-  ${media.greaterThan('md')`
+  ${media.between('md', 'lg')`
     padding: 0 3rem;
   `}
 `;
