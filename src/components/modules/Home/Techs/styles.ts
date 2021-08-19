@@ -12,7 +12,6 @@ interface TechUsageItemProps {
 
 export const Container = styled.div`
   background: var(--black-100);
-
   padding: 5rem 0;
 
   h1 {
@@ -22,12 +21,10 @@ export const Container = styled.div`
 
   > span {
     display: block;
-
     color: var(--gray-400);
     font-size: 1.25rem;
     text-align: center;
-
-    margin-top: 10px;
+    margin-top: 0.714rem;
   }
 
   ${media.lessThan('sm')`
@@ -38,7 +35,7 @@ export const Container = styled.div`
     }
 
     > span {
-      margin-top: 5px;
+      margin-top: 0.357rem;
       font-size: 1rem;
     }
   `}
@@ -52,8 +49,7 @@ export const TechList = styled.ul`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 2.5rem;
-
-  max-width: 1100px;
+  max-width: 68.75rem;
   margin: 5rem auto 0;
 
   ${media.lessThan('md')`
@@ -75,14 +71,10 @@ export const TechList = styled.ul`
 export const TechListItem = styled.li<TechListItemProps>`
   display: flex;
   align-items: center;
-
   background: var(--black-400);
-  border-radius: 8px;
-
-  padding-right: 14px;
-
-  border: 2px solid transparent;
-
+  border-radius: 0.5rem;
+  padding-right: 0.875rem;
+  border: 0.125rem solid transparent;
   transition: border-color 0.2s;
 
   &:hover {
@@ -90,9 +82,9 @@ export const TechListItem = styled.li<TechListItemProps>`
   }
 
   img {
-    width: 71px;
-    height: 71px;
-    border-radius: 5px 0 0 5px;
+    width: 4.438rem;
+    height: 4.438rem;
+    border-radius: 0.313rem 0 0 0.313rem;
   }
 
   ${media.lessThan('md')`
@@ -105,10 +97,8 @@ export const TechListItem = styled.li<TechListItemProps>`
 export const TechItemData = styled.div`
   display: flex;
   align-items: center;
-
   flex: 1;
-
-  margin-left: 14px;
+  margin-left: 0.875rem;
 
   span {
     font-weight: 500;
@@ -126,30 +116,27 @@ export const TechItemData = styled.div`
 export const TechDataContainer = styled.div`
   display: flex;
   align-items: center;
-
   margin-left: auto;
 `;
 
 export const TechUsageList = styled.ul`
   display: flex;
   align-items: center;
-
   margin-left: auto;
 
-  @media screen and (max-width: 399px) {
+  @media screen and (max-width: 24.938rem) {
     display: none;
   }
 `;
 
 export const TechUsageItem = styled.li<TechUsageItemProps>`
-  height: 4px;
-  width: 17px;
-
-  border-radius: 1px;
-  background: var(--blue-400);
+  height: 0.25rem;
+  width: 1.063rem;
+  border-radius: 0.063rem;
+  background: var(--pink-500);
 
   & + li {
-    margin-left: 5px;
+    margin-left: 0.313rem;
   }
 
   ${({ isUsage }) =>
@@ -160,25 +147,20 @@ export const TechUsageItem = styled.li<TechUsageItemProps>`
 `;
 
 export const TechInformation = styled.div`
-  height: 30px;
-  width: 30px;
+  height: 1.875rem;
+  width: 1.875rem;
   background: var(--black-100);
-
   position: relative;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   color: var(--white);
-
   border-radius: 50%;
-
-  margin-left: 14px;
+  margin-left: 0.875rem;
 
   img {
-    width: 13px;
-    height: 13px;
+    width: 0.813rem;
+    height: 0.813rem;
   }
 
   &::before {
@@ -189,33 +171,26 @@ export const TechInformation = styled.div`
     border-radius: 0.25rem;
     color: var(--white);
     text-align: center;
-
     transition: all 0.4s;
-
     opacity: 0;
     visibility: hidden;
-
     z-index: 1;
-
-    top: 40px;
-
-    min-width: 300px;
+    top: 2.5rem;
+    min-width: 18.75rem;
 
     ${media.lessThan('sm')`
-      right: -40px;
+      right: -2.5rem;
     `}
   }
 
   &::after {
     content: '';
     position: absolute;
-    top: 32px;
+    top: 2rem;
     border-style: solid;
-    border-width: 0 8px 8px 8px;
+    border-width: 0 0.5rem 0.5rem 0.5rem;
     border-color: transparent transparent #2c2d2e transparent;
-
     transition: all 0.4s;
-
     opacity: 0;
     visibility: hidden;
   }

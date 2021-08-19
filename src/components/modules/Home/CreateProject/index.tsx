@@ -3,11 +3,7 @@ import { useState } from 'react';
 import { FormProvider, useForm } from 'react-hook-form';
 import { FiMail, FiMessageSquare, FiPlus, FiSmartphone, FiUser } from 'react-icons/fi';
 
-import { Input } from '~/components/shared/Input';
-import { Button } from '~/components/shared/Button';
-import { TextArea } from '~/components/shared/TextArea';
-import { InputMask } from '~/components/shared/InputMask';
-import { InputRadio } from '~/components/shared/InputRadio';
+import { Input, Button, TextArea, InputMask, InputRadio } from '~/components';
 
 import {
   Container,
@@ -77,7 +73,7 @@ export function CreateProject() {
               <span>Número de páginas do projeto</span>
 
               <ul>
-                {[1, 2, 3, 4, 5].map(pageItem => (
+                {[1, 2, 3, 4, 5, 6, 7].map(pageItem => (
                   <SelectAmountItem
                     key={String(Math.random())}
                     isSelected={pageItem.toString() === pageSelected}

@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import Link from 'next/link';
 
-import { Button } from '~/components/shared/Button';
+import { Button } from '~/components';
 
 import { Container, Content, UserContainer, ButtonContainer } from './styles';
 

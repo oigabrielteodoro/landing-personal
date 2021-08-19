@@ -5,11 +5,11 @@ import { media } from '~/styles/media';
 export const Container = styled.footer``;
 
 export const TopContainer = styled.div`
-  padding: 55px 100px;
+  padding: 3.438rem 6.25rem;
   background: var(--black-100);
 
   nav {
-    max-width: 1250px;
+    max-width: 78.125rem;
     margin: 0 auto;
 
     ul {
@@ -17,10 +17,9 @@ export const TopContainer = styled.div`
       align-items: center;
 
       li {
-        font-size: 18px;
+        font-size: 1.125rem;
         font-weight: 500;
         color: var(--white);
-
         transition: filter 0.2s;
         cursor: pointer;
 
@@ -29,7 +28,7 @@ export const TopContainer = styled.div`
         }
 
         & + li {
-          margin-left: 50px;
+          margin-left: 3.125rem;
         }
       }
     }
@@ -41,16 +40,14 @@ export const TopContainer = styled.div`
 `;
 
 export const BottomContainer = styled.div`
-  padding: 65px 0;
-
+  padding: 4.063rem 0;
   color: var(--gray-400);
   font-size: 1.25rem;
-
-  max-width: 1250px;
+  max-width: 78.125rem;
   margin: 0 auto;
 
   a {
-    color: var(--blue-400);
+    color: var(--pink-500);
   }
 
   ${media.lessThan('md')`

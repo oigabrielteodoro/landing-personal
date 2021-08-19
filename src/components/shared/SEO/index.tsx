@@ -8,7 +8,13 @@ interface SEOProps {
   shouldIndexPage?: boolean;
 }
 
-export function SEO({ title, description, image, shouldExcludeTitleSuffix = false, shouldIndexPage = true }: SEOProps) {
+export function SEO({
+  title,
+  description,
+  image,
+  shouldExcludeTitleSuffix = false,
+  shouldIndexPage = true,
+}: SEOProps) {
   const pageTitle = `${title} ${!shouldExcludeTitleSuffix ? '| Gabriel Teodoro' : ''}`;
   const pageImage = image ? `${process.env.NEXT_PUBLIC_SITE_URL}/${image}` : null;
 

@@ -7,23 +7,19 @@ interface ContainerProps {
 
 export const Container = styled.div<ContainerProps>`
   background: var(--black-800);
-  border-radius: 5px;
-
-  border: 2px solid transparent;
-
+  border-radius: 0.313rem;
+  border: 0.125rem solid transparent;
   transition: all 0.2s;
-
   width: 100%;
 
   section {
     display: flex;
     align-items: center;
-
-    padding: 20px 25px;
+    padding: 1.25rem 1.563rem;
 
     svg {
       color: var(--gray-100);
-      margin-right: 16px;
+      margin-right: 1rem;
     }
 
     span {
@@ -32,23 +28,20 @@ export const Container = styled.div<ContainerProps>`
   }
 
   hr {
-    border: 1px solid var(--black-400);
+    border: 0.063rem solid var(--black-400);
   }
 
   textarea {
-    padding: 0 10px;
-
+    padding: 0 0.625rem;
     background: transparent;
     border: 0;
     font-size: 1rem;
     color: var(--white);
-
-    margin-left: 16px;
-
-    width: 100%;
+    margin-left: 1rem;
+    width: 90%;
     resize: none;
-
-    margin-top: 20px;
+    height: 7.5rem;
+    margin-top: 1.25rem;
 
     &::placeholder {
       color: var(--gray-400);
@@ -58,14 +51,14 @@ export const Container = styled.div<ContainerProps>`
   ${({ isFocused }) =>
     isFocused &&
     css`
-      border-color: var(--blue-400);
+      border-color: var(--pink-500);
     `}
 
   ${({ isFilled }) =>
     isFilled &&
     css`
       svg {
-        color: var(--blue-400);
+        color: var(--pink-500);
       }
     `}
 `;

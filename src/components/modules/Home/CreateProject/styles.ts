@@ -8,8 +8,8 @@ interface SelectAmountItemProps {
 }
 
 export const Container = styled.div`
-  max-width: 1100px;
-  margin: 138px auto;
+  max-width: 68.75rem;
+  margin: 8.625rem auto;
 
   display: flex;
   align-items: flex-start;
@@ -34,22 +34,22 @@ export const Content = styled.div`
 
   h2 {
     font-size: 1.25rem;
-    margin-top: 20px;
+    margin-top: 1.25rem;
   }
 
   span {
     display: block;
     color: var(--gray-400);
     font-size: 1rem;
-    margin-top: 20px;
+    margin-top: 1.25rem;
   }
 
   img {
     position: relative;
-    width: 722px;
+    width: 45.125rem;
     z-index: -1;
-    left: -100px;
-    top: 116px;
+    left: -6.25rem;
+    top: 7.25rem;
   }
 
   ${media.lessThan('md')`
@@ -74,18 +74,15 @@ export const Content = styled.div`
 
 export const FormContainer = styled.div`
   background: var(--black-400);
-
-  padding: 59px;
-  border-radius: 10px;
-
-  margin-left: -160px;
-
-  max-width: 544px;
-  width: 100%;
+  padding: 3.688rem;
+  border-radius: 0.625rem;
+  margin-left: -10.125rem;
+  width: 56.25rem;
 
   form {
     display: grid;
-    grid-gap: 23px;
+    grid-gap: 1.438rem;
+    width: 100%;
   }
 
   ${media.lessThan('md')`
@@ -114,16 +111,15 @@ export const YouHaveDesignContainer = styled.div`
   section {
     display: flex;
     align-items: center;
-
-    margin-top: 20px;
+    margin-top: 1.25rem;
 
     ${InputRadioContainer} {
       & + ${InputRadioContainer} {
-        margin-left: 25px;
+        margin-left: 1.563rem;
       }
 
       span {
-        margin-left: 13px;
+        margin-left: 0.813rem;
       }
     }
   }
@@ -142,43 +138,40 @@ export const SelectAmountPagesContainer = styled.div`
   ul {
     display: flex;
     align-items: center;
-    margin-top: 18px;
+    margin-top: 1.125rem;
   }
 `;
 
 export const SelectAmountItem = styled.li<SelectAmountItemProps>`
   background: transparent;
-
-  border: 2px solid var(--blue-400);
-
-  height: 40px;
-  width: 40px;
-
+  border: 0.125rem solid var(--pink-500);
+  height: 2.5rem;
+  width: 2.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
-
   transition: all 0.2s;
-
   cursor: pointer;
   z-index: 1;
 
   &:hover {
-    background: var(--blue-400);
+    background: var(--pink-500);
   }
 
   & + li {
-    margin-left: 14px;
+    margin-left: 0.875rem;
   }
 
   ${({ isSelected }) =>
     isSelected &&
     css`
-      background: var(--blue-400);
+      background: var(--pink-500);
     `}
 
-  @media screen and (max-width: 369px) {
-    &:nth-child(5) {
+  @media screen and (max-width: 23.063rem) {
+    &:nth-child(5),
+    &:nth-child(6),
+    &:nth-child(7) {
       display: none;
     }
   }

@@ -10,7 +10,13 @@ interface TextAreaProps extends TextareaHTMLAttributes<HTMLTextAreaElement> {
   icon?: ComponentType<IconBaseProps>;
 }
 
-export function TextArea({ name, icon: Icon, placeholder, defaultValue, ...rest }: TextAreaProps) {
+export function TextArea({
+  name,
+  icon: Icon,
+  placeholder,
+  defaultValue,
+  ...rest
+}: TextAreaProps) {
   const { register, unregister, watch, setValue } = useFormContext();
 
   const [isFilled, setIsFilled] = useState(!!defaultValue);

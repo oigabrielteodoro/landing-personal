@@ -1,10 +1,10 @@
 import { generateMedia } from 'styled-media-query';
 
 export const media = generateMedia({
-  xxs: '320px',
-  xs: '375px',
-  sm: '576px',
-  md: '768px',
-  lg: '992px',
-  xl: '1200px',
+  xxs: '20rem',
+  xs: '23.438rem',
+  sm: '36rem',
+  md: '48rem',
+  lg: '62rem',
+  xl: '75rem',
 });

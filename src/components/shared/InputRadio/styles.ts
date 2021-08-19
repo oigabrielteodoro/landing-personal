@@ -18,30 +18,22 @@ export const Container = styled.div`
 
 export const Circle = styled.button<CircleProps>`
   position: relative;
-
   background: transparent;
-  width: 25px;
-  height: 25px;
-
-  border: 2px solid var(--blue-400);
-
+  width: 1.563rem;
+  height: 1.563rem;
+  border: 0.125rem solid var(--pink-500);
   border-radius: 50%;
 
   &::before {
     content: '';
     position: absolute;
-
-    top: 3px;
-    left: 3px;
-
-    width: 15px;
-    height: 15px;
-
+    top: 0.188rem;
+    left: 0.188rem;
+    width: 0.938rem;
+    height: 0.938rem;
     transition: all 0.3s;
-
-    background: var(--blue-400);
+    background: var(--pink-500);
     border-radius: 50%;
-
     opacity: 0;
     visibility: hidden;
   }

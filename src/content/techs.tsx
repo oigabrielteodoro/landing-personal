@@ -15,7 +15,8 @@ export const techs = [
     level: 3,
     img: <img src="/static/img/techs/react.svg" alt="ReactJS" />,
     color: '#3BC0DD',
-    content: 'Utilizamos o ReactJS para construir grande parte das interfaces de nossas aplicações.',
+    content:
+      'Utilizamos o ReactJS para construir grande parte das interfaces de nossas aplicações.',
   },
   {
     id: uuid(),
@@ -23,7 +24,8 @@ export const techs = [
     level: 3,
     img: <img src="/static/img/techs/react.svg" alt="React Native" />,
     color: '#3BC0DD',
-    content: 'Utilizamos o React Native para construir todos os aplicativos Mobile para iOS & Android!',
+    content:
+      'Utilizamos o React Native para construir todos os aplicativos Mobile para iOS & Android!',
   },
   {
     id: uuid(),
@@ -48,6 +50,7 @@ export const techs = [
     level: 2,
     img: <img src="/static/img/techs/javascript.svg" alt="Javascript" />,
     color: '#FDE635',
-    content: 'Uma pequena parte da codebase pode ser escrita em Javascript, dependendo do projeto.',
+    content:
+      'Uma pequena parte da codebase pode ser escrita em Javascript, dependendo do projeto.',
   },
 ];

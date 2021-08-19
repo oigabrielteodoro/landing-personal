@@ -5,10 +5,8 @@ export const Container = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-  max-width: 1100px;
+  max-width: 68.75rem;
   margin: 0 auto;
-
   padding: 5.75rem 0;
 
   nav ul {
@@ -19,13 +17,12 @@ export const Container = styled.header`
       font-size: 1rem;
       font-weight: 500;
       font-family: 'Rubik';
-
       transition: filter 0.2s;
 
       cursor: pointer;
 
       & + li {
-        margin-left: 40px;
+        margin-left: 2.5rem;
       }
 
       &:hover {
