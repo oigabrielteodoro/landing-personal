@@ -5,15 +5,15 @@ import ReactInputMask, { Props as InputProps } from 'react-input-mask';
 
 import { IconBaseProps } from 'react-icons';
 
-import { Container } from './styles';
+import * as S from './InputMask.styled';
 
-interface InputMaskProps extends InputProps {
+type Props = {
   name: string;
   icon?: ComponentType<IconBaseProps>;
   maskChar?: any;
-}
+} & InputProps;
 
-export function InputMask({ name, icon: Icon, defaultValue, ...rest }: InputMaskProps) {
+export function InputMask({ name, icon: Icon, defaultValue, ...rest }: Props) {
   const { register, unregister, watch, setValue } = useFormContext();
 
   const [isFilled, setIsFilled] = useState(!!defaultValue);
@@ -48,7 +48,7 @@ export function InputMask({ name, icon: Icon, defaultValue, ...rest }: InputMask
   }
 
   return (
-    <Container isFilled={isFilled} isFocused={isFocused}>
+    <S.Container isFilled={isFilled} isFocused={isFocused}>
       {Icon && <Icon size={25} />}
 
       <ReactInputMask
@@ -59,6 +59,6 @@ export function InputMask({ name, icon: Icon, defaultValue, ...rest }: InputMask
         onFocus={handleInputFocus}
         {...rest}
       />
-    </Container>
+    </S.Container>
   );
 }
