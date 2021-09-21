@@ -3,12 +3,12 @@ import { useFormContext } from 'react-hook-form';
 
 import { IconBaseProps } from 'react-icons';
 
-import { Container } from './styles';
+import * as S from './TextArea.styled';
 
-interface TextAreaProps extends TextareaHTMLAttributes<HTMLTextAreaElement> {
+type Props = {
   name: string;
   icon?: ComponentType<IconBaseProps>;
-}
+} & TextareaHTMLAttributes<HTMLTextAreaElement>;
 
 export function TextArea({
   name,
@@ -16,7 +16,7 @@ export function TextArea({
   placeholder,
   defaultValue,
   ...rest
-}: TextAreaProps) {
+}: Props) {
   const { register, unregister, watch, setValue } = useFormContext();
 
   const [isFilled, setIsFilled] = useState(!!defaultValue);
@@ -51,7 +51,7 @@ export function TextArea({
   }
 
   return (
-    <Container isFilled={isFilled} isFocused={isFocused}>
+    <S.Container isFilled={isFilled} isFocused={isFocused}>
       <section>
         {Icon && <Icon size={25} />}
 
@@ -70,6 +70,6 @@ export function TextArea({
         maxLength={300}
         {...rest}
       />
-    </Container>
+    </S.Container>
   );
 }
