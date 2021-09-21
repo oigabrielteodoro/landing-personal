@@ -1,12 +1,12 @@
 import Head from 'next/head';
 
-interface SEOProps {
+type Props = {
   title: string;
   description?: string;
   image?: string;
   shouldExcludeTitleSuffix?: boolean;
   shouldIndexPage?: boolean;
-}
+};
 
 export function SEO({
   title,
@@ -14,7 +14,7 @@ export function SEO({
   image,
   shouldExcludeTitleSuffix = false,
   shouldIndexPage = true,
-}: SEOProps) {
+}: Props) {
   const pageTitle = `${title} ${!shouldExcludeTitleSuffix ? '| Gabriel Teodoro' : ''}`;
   const pageImage = image ? `${process.env.NEXT_PUBLIC_SITE_URL}/${image}` : null;
 
