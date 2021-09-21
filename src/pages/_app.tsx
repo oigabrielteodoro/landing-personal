@@ -1,7 +1,6 @@
 import { AppProps } from 'next/app';
 
-import { Header } from '~/components/shared/Header';
-import { Footer } from '~/components/shared/Footer';
+import { Header, Footer } from '~/components';
 
 import { GlobalStyle } from '~/styles/global';
 
