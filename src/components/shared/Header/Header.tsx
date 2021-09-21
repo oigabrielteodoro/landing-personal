@@ -1,8 +1,8 @@
-import { Container } from './styles';
+import * as S from './Header.styled';
 
 export function Header() {
   return (
-    <Container>
+    <S.Container>
       <img src="/static/img/logo.svg" alt="Gabriel Teodoro" />
       <nav>
         <ul>
@@ -10,6 +10,6 @@ export function Header() {
           <li>Iniciar um projeto</li>
         </ul>
       </nav>
-    </Container>
+    </S.Container>
   );
 }
