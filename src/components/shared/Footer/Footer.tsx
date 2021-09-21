@@ -1,12 +1,12 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import Link from 'next/link';
 
-import { BottomContainer, Container, TopContainer } from './styles';
+import * as S from './Footer.styled';
 
 export function Footer() {
   return (
-    <Container>
-      <TopContainer>
+    <S.Container>
+      <S.TopContainer>
         <nav>
           <ul>
             <li>Sobre mim</li>
@@ -14,14 +14,14 @@ export function Footer() {
             <li>Iniciar um novo projeto</li>
           </ul>
         </nav>
-      </TopContainer>
-      <BottomContainer>
+      </S.TopContainer>
+      <S.BottomContainer>
         © 2019 - 2021{' '}
         <Link href="https://github.com/oigabrielteodoro">
           <a target="_blank">Gabriel Teodoro</a>
         </Link>
         . Todos os direitos reservados.
-      </BottomContainer>
-    </Container>
+      </S.BottomContainer>
+    </S.Container>
   );
 }
