@@ -15,6 +15,7 @@ export function TextArea({
   icon: Icon,
   placeholder,
   defaultValue,
+  maxLength = 200,
   ...rest
 }: Props) {
   const { register, unregister, watch, setValue } = useFormContext();
@@ -67,7 +68,7 @@ export function TextArea({
         onBlur={handleTextAreaBlur}
         onFocus={handleTextAreaFocus}
         placeholder="Informações adicionais"
-        maxLength={300}
+        maxLength={maxLength}
         {...rest}
       />
     </S.Container>
