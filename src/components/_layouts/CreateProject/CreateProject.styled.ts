@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-import { Container as InputRadioContainer } from '~/components/shared/InputRadio/styles';
+import { Container as InputRadioContainer } from '~/components/Radio/Radio.styled';
 import { media } from '~/styles/media';
 
 interface SelectAmountItemProps {

@@ -5,14 +5,7 @@ import { FiMail, FiMessageSquare, FiPlus, FiSmartphone, FiUser } from 'react-ico
 
 import { Input, Button, TextArea, InputMask, Radio } from '~/components';
 
-import {
-  Container,
-  Content,
-  FormContainer,
-  YouHaveDesignContainer,
-  SelectAmountPagesContainer,
-  SelectAmountItem,
-} from './styles';
+import * as S from './CreateProject.styled';
 
 export function CreateProject() {
   const { handleSubmit, ...form } = useForm();
@@ -21,8 +14,8 @@ export function CreateProject() {
   const [pageSelected, setPageSelected] = useState<string>();
 
   return (
-    <Container>
-      <Content>
+    <S.Container>
+      <S.Content>
         <h1>
           const <strong className="blue-color">project</strong> = new{' '}
           <strong className="gray-color">Project</strong>();
@@ -36,8 +29,8 @@ export function CreateProject() {
         </span>
 
         <img src="/static/img/create-project-peoples.svg" alt="Create Project Peoples" />
-      </Content>
-      <FormContainer>
+      </S.Content>
+      <S.FormContainer>
         <FormProvider handleSubmit={handleSubmit} {...form}>
           <form>
             <Input name="name" icon={FiUser} placeholder="Nome completo" />
@@ -52,7 +45,7 @@ export function CreateProject() {
               placeholder="Telefone"
             />
 
-            <YouHaveDesignContainer>
+            <S.YouHaveDesignContainer>
               <span>Você já possui o design?</span>
 
               <section>
@@ -67,30 +60,30 @@ export function CreateProject() {
                   onChangeValue={() => setHasDesign(false)}
                 />
               </section>
-            </YouHaveDesignContainer>
+            </S.YouHaveDesignContainer>
 
-            <SelectAmountPagesContainer>
+            <S.SelectAmountPagesContainer>
               <span>Número de páginas do projeto</span>
 
               <ul>
                 {[1, 2, 3, 4, 5, 6, 7].map(pageItem => (
-                  <SelectAmountItem
+                  <S.SelectAmountItem
                     key={String(Math.random())}
                     isSelected={pageItem.toString() === pageSelected}
                     onClick={() => setPageSelected(pageItem.toString())}
                   >
                     {pageItem}
-                  </SelectAmountItem>
+                  </S.SelectAmountItem>
                 ))}
-                <SelectAmountItem
+                <S.SelectAmountItem
                   key={String(Math.random())}
                   isSelected={pageSelected === '+'}
                   onClick={() => setPageSelected('+')}
                 >
                   <FiPlus size={18} />
-                </SelectAmountItem>
+                </S.SelectAmountItem>
               </ul>
-            </SelectAmountPagesContainer>
+            </S.SelectAmountPagesContainer>
 
             <TextArea name="message" icon={FiMessageSquare} placeholder="Mensagem" />
 
@@ -99,7 +92,7 @@ export function CreateProject() {
             </Button>
           </form>
         </FormProvider>
-      </FormContainer>
-    </Container>
+      </S.FormContainer>
+    </S.Container>
   );
 }
