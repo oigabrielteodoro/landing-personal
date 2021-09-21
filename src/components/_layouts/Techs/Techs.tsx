@@ -1,19 +1,10 @@
 import { techs } from '~/content/techs';
 
-import {
-  Container,
-  TechList,
-  TechListItem,
-  TechItemData,
-  TechDataContainer,
-  TechUsageItem,
-  TechUsageList,
-  TechInformation,
-} from './styles';
+import * as S from './Techs.styled';
 
 export function Techs() {
   return (
-    <Container>
+    <S.Container>
       <h1>
         <strong className="blue-color">{`{`}</strong>
         tecnologias_mais_usadas
@@ -21,32 +12,32 @@ export function Techs() {
       </h1>
       <span>Ordenado por relevância</span>
 
-      <TechList>
+      <S.TechList>
         {techs.map(tech => (
-          <TechListItem key={tech.id} colorToHover={tech.color}>
+          <S.TechListItem key={tech.id} colorToHover={tech.color}>
             {tech.img}
 
-            <TechItemData>
+            <S.TechItemData>
               <span>{tech.name}</span>
 
-              <TechDataContainer>
-                <TechUsageList>
+              <S.TechDataContainer>
+                <S.TechUsageList>
                   {[1, 2, 3].map(level => (
-                    <TechUsageItem
+                    <S.TechUsageItem
                       key={String(Math.random())}
                       isUsage={tech.level >= level}
                     />
                   ))}
-                </TechUsageList>
+                </S.TechUsageList>
 
-                <TechInformation data-content={tech.content}>
+                <S.TechInformation data-content={tech.content}>
                   <img src="/static/img/icons/help.svg" alt="Help" />
-                </TechInformation>
-              </TechDataContainer>
-            </TechItemData>
-          </TechListItem>
+                </S.TechInformation>
+              </S.TechDataContainer>
+            </S.TechItemData>
+          </S.TechListItem>
         ))}
-      </TechList>
-    </Container>
+      </S.TechList>
+    </S.Container>
   );
 }
