@@ -1,9 +1,9 @@
 import styled, { css } from 'styled-components';
 
-interface ContainerProps {
+type ContainerProps = {
   isFocused: boolean;
   isFilled: boolean;
-}
+};
 
 export const Container = styled.div<ContainerProps>`
   height: 4.063rem;

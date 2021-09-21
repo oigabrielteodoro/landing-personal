@@ -3,12 +3,12 @@ import { useFormContext } from 'react-hook-form';
 
 import { IconBaseProps } from 'react-icons';
 
-import { Container } from './styles';
+import * as S from './Input.styled';
 
-interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
+type InputProps = {
   name: string;
   icon?: ComponentType<IconBaseProps>;
-}
+} & InputHTMLAttributes<HTMLInputElement>;
 
 export function Input({ name, icon: Icon, defaultValue, ...rest }: InputProps) {
   const { register, unregister, watch, setValue } = useFormContext();
@@ -45,7 +45,7 @@ export function Input({ name, icon: Icon, defaultValue, ...rest }: InputProps) {
   }
 
   return (
-    <Container isFilled={isFilled} isFocused={isFocused}>
+    <S.Container isFilled={isFilled} isFocused={isFocused}>
       {Icon && <Icon size={25} />}
 
       <input
@@ -56,6 +56,6 @@ export function Input({ name, icon: Icon, defaultValue, ...rest }: InputProps) {
         onFocus={handleInputFocus}
         {...rest}
       />
-    </Container>
+    </S.Container>
   );
 }
