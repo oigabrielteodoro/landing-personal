@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { FormProvider, useForm } from 'react-hook-form';
 import { FiMail, FiMessageSquare, FiPlus, FiSmartphone, FiUser } from 'react-icons/fi';
 
-import { Input, Button, TextArea, InputMask, InputRadio } from '~/components';
+import { Input, Button, TextArea, InputMask, Radio } from '~/components';
 
 import {
   Container,
@@ -56,12 +56,12 @@ export function CreateProject() {
               <span>Você já possui o design?</span>
 
               <section>
-                <InputRadio
+                <Radio
                   isSelected={hasDesign}
                   placeholder="Sim"
                   onChangeValue={() => setHasDesign(true)}
                 />
-                <InputRadio
+                <Radio
                   isSelected={!hasDesign}
                   placeholder="Não"
                   onChangeValue={() => setHasDesign(false)}

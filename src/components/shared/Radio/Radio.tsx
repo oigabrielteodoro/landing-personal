@@ -1,24 +1,24 @@
 import { MouseEvent } from 'react';
 
-import { Container, Circle } from './styles';
+import * as S from './Radio.styled';
 
-interface InputRadioProps {
+type Props = {
   isSelected: boolean;
   placeholder: string;
   onChangeValue: () => void;
-}
+};
 
-export function InputRadio({ isSelected, placeholder, onChangeValue }: InputRadioProps) {
+export function Radio({ isSelected, placeholder, onChangeValue }: Props) {
   function handleUpdate(event: MouseEvent) {
     event.preventDefault();
     onChangeValue();
   }
 
   return (
-    <Container>
-      <Circle isSelected={isSelected} onClick={handleUpdate} />
+    <S.Container>
+      <S.Circle isSelected={isSelected} onClick={handleUpdate} />
 
       <span>{placeholder}</span>
-    </Container>
+    </S.Container>
   );
 }
