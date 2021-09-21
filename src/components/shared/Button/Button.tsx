@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Container = styled.button`
+export const Button = styled.button`
   position: relative;
   background: transparent;
   border: 0.125rem solid var(--pink-500);

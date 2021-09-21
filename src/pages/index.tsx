@@ -11,11 +11,8 @@ export default function Home() {
 
       <Container>
         <Apresentation />
-
         <Services />
-
         <Techs />
-
         <CreateProject />
       </Container>
     </>
