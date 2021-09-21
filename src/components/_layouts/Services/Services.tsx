@@ -1,12 +1,12 @@
 import { FiArrowRight } from 'react-icons/fi';
 
-import { Container, Content, ServiceCard } from './styles';
+import * as S from './Services.styled';
 
 export function Services() {
   return (
-    <Container>
-      <Content>
-        <ServiceCard>
+    <S.Container>
+      <S.Content>
+        <S.ServiceCard>
           <img src="/static/img/icons/sites.svg" alt="Sites" />
 
           <section>
@@ -19,8 +19,8 @@ export function Services() {
               Ver projetos <FiArrowRight size={15} />
             </button>
           </section>
-        </ServiceCard>
-        <ServiceCard>
+        </S.ServiceCard>
+        <S.ServiceCard>
           <img src="/static/img/icons/softwares.svg" alt="Softwares" />
 
           <section>
@@ -33,8 +33,8 @@ export function Services() {
               Ver projetos <FiArrowRight size={15} />
             </button>
           </section>
-        </ServiceCard>
-        <ServiceCard>
+        </S.ServiceCard>
+        <S.ServiceCard>
           <img src="/static/img/icons/applications.svg" alt="Applications" />
 
           <section>
@@ -48,8 +48,8 @@ export function Services() {
               Ver projetos <FiArrowRight size={15} />
             </button>
           </section>
-        </ServiceCard>
-      </Content>
-    </Container>
+        </S.ServiceCard>
+      </S.Content>
+    </S.Container>
   );
 }
