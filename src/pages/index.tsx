@@ -1,6 +1,4 @@
-import { SEO } from '~/components/shared/SEO';
-
-import { Apresentation, Services, Techs, CreateProject } from '~/components';
+import { Apresentation, Services, Techs, CreateProject, SEO } from '~/components';
 
 import { Container } from '~/styles/pages/Home';
 

@@ -3,12 +3,12 @@ import Link from 'next/link';
 
 import { Button } from '~/components';
 
-import { Container, Content, UserContainer, ButtonContainer } from './styles';
+import * as S from './Apresentation.styled';
 
 export function Apresentation() {
   return (
-    <Container>
-      <Content>
+    <S.Container>
+      <S.Content>
         <h1>
           <strong className="blue-color">{`{`}</strong>
           as_melhores_tecnologias
@@ -21,7 +21,7 @@ export function Apresentation() {
           <br /> layout até o código.
         </span>
 
-        <UserContainer>
+        <S.UserContainer>
           <img src="/static/img/avatar.svg" alt="Avatar" />
 
           <div>
@@ -33,16 +33,16 @@ export function Apresentation() {
               </Link>
             </p>
           </div>
-        </UserContainer>
+        </S.UserContainer>
 
-        <ButtonContainer>
+        <S.ButtonContainer>
           <Button>
             <span>Iniciar um projeto</span>
           </Button>
-        </ButtonContainer>
-      </Content>
+        </S.ButtonContainer>
+      </S.Content>
 
       <img src="/static/img/developer-working.svg" alt="Developer Working" />
-    </Container>
+    </S.Container>
   );
 }
