@@ -27,7 +27,7 @@ export function Apresentation() {
           <div>
             <span>Gabriel Teodoro</span>
             <p>
-              Product Developer at{' '}
+              Frontend Developer at{' '}
               <Link href="https://brainn.co">
                 <a target="_blank">Brainn Co</a>
               </Link>
